@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "#/*": ["types/*"]
+    },
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": ["node", "vite/client", "element-plus/global",],
+    "typeRoots": ["./node_modules/@types/", "./types"],
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/main.d.ts", //**/递归匹配任意子目录
+    "src/**/*.js",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "src/auto-imports.d.ts",
+  ]
+}
